@@ -325,9 +325,9 @@ idp = f'''<section class="intro">
       <figure><div class="stack" style="gap:14px">{ph("orl15.jpg", "Open living area with boucle chairs, a round coffee table and oak slat screens")}
         <h3>{t("Design services", "Servicios de diseño")}</h3>
         <p class="muted">{t("Room planning, palette and material direction, from one room to a whole home.", "Planificación de espacios, paleta y dirección de materiales, de un espacio a la casa completa.")}</p></div></figure>
-      <figure><div class="stack" style="gap:14px">{ph("orl-r1.jpg", "Dining table with upholstered chairs beneath a globe chandelier")}
+      <figure><div class="stack" style="gap:14px">{ph("dsc00725.jpg", "Claudia measuring a living room floor beside a boucle chair to plan the furniture layout", "45% 50%")}
         <h3>{t("Furnishings", "Mobiliario")}</h3>
-        <p class="muted">{t("Furniture selected for scale, comfort and the way you use the room, sourced through our partner studio, Conceptual Furniture.", "Muebles elegidos por escala, comodidad y la forma en que usas el espacio, a través de nuestro estudio aliado, Conceptual Furniture.")}</p></div></figure>
+        <p class="muted">{t("We measure each room to plan furniture that fits its scale, comfort and the way you use it, sourced through our partner studio, Conceptual Furniture.", "Medimos cada espacio para elegir muebles que encajen en su escala, su comodidad y la forma en que lo usas, a través de nuestro estudio aliado, Conceptual Furniture.")}</p></div></figure>
       <figure><div class="stack" style="gap:14px">{ph("orl25.jpg", "Lit shelving styled with ceramics beside a sculptural armchair")}
         <h3>{t("Styling &amp; curated sourcing", "Ambientación y selección de piezas")}</h3>
         <p class="muted">{t("The finishing layer: accessories, objects and arrangements sourced and placed for you.", "La última capa: accesorios, objetos y arreglos seleccionados y ubicados por nosotros.")}</p></div></figure>
