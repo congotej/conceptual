@@ -471,7 +471,7 @@ pf = f'''<section class="intro">
     <div class="stack" style="margin-top:clamp(28px,4vw,48px)">
       <div class="label">{t("Installation day", "Día de instalación")}</div>
       <div class="grid3">
-        <figure>{ph("inst18.jpg", "Ceiling-mounted ripplefold track ready for drapery")}<figcaption>{t("01 · Track", "01 · Riel")}</figcaption></figure>
+        <figure>{ph("install-track.jpg", "Installer on scaffolding mounting the ceiling track above a double-height window", "40% 30%")}<figcaption>{t("01 · Track", "01 · Riel")}</figcaption></figure>
         <figure>{ph("inst17.jpg", "Installer hooking a linen drape onto the ceiling track", "60% 50%")}<figcaption>{t("02 · Hanging", "02 · Instalación")}</figcaption></figure>
         <figure>{ph("inst16.jpg", "Dressing the folds of the finished sheer", "70% 50%")}<figcaption>{t("03 · Dressing", "03 · Acabado")}</figcaption></figure>
       </div>
