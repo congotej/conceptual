@@ -89,6 +89,7 @@ FOOTER = f'''<footer class="site-foot">
 </footer>
 <div class="mobile-cta"><a class="btn solid" href="contact.html">{t("Schedule a consultation", "Agenda una consulta")}</a></div>'''
 
+SITE = "https://conceptualusa.com/"
 SCRIPT = '<script src="site.js"></script>'
 
 SCHEMA = """
@@ -96,14 +97,21 @@ SCHEMA = """
 {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Conceptual Interiors",
 "description":"Custom window treatments and interior design: drapery, sheers, blackout, shades, motorization, furnishings and seasonal styling.",
 "telephone":"+1-754-245-6323","email":"clavegiraldo@hotmail.com",
+"url":"https://conceptualusa.com/","logo":"https://conceptualusa.com/brand/icon-512.png","image":"https://conceptualusa.com/img/inst13-hero.jpg",
 "founder":{"@type":"Person","name":"Claudia Vélez"},
 "areaServed":["South Florida","Orlando"],"knowsLanguage":["en","es"],
 "sameAs":["https://www.instagram.com/conceptualusa/"]}
 </script>"""
 
 def page(fname, title, desc, body):
+    url = SITE + ("" if fname == "index.html" else fname)
     head = (f'<title>{title}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
             f'<meta name="description" content="{desc}">\n'
+            f'<link rel="canonical" href="{url}">\n'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Conceptual Interiors">'
+            f'<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">'
+            f'<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}img/inst13-hero.jpg">'
+            f'<meta name="twitter:card" content="summary_large_image">\n'
             '<link rel="icon" href="brand/favicon-32.png" sizes="32x32"><link rel="icon" href="brand/logo-full.svg" type="image/svg+xml">'
             '<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">\n'
             f'{FONTS}\n<link rel="stylesheet" href="styles.css">'
@@ -637,4 +645,11 @@ for d in (DIST, PREV):
         os.makedirs(os.path.join(d, sub))
         for u in sorted(used):
             shutil.copy(os.path.join(ROOT, sub, u), os.path.join(d, sub, u))
+from datetime import date
+sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+for fname, *_ in PAGES:
+    sm += f'  <url><loc>{SITE}{"" if fname == "index.html" else fname}</loc><lastmod>{date.today()}</lastmod></url>\n'
+sm += '</urlset>\n'
+open(os.path.join(DIST, "sitemap.xml"), "w").write(sm)
+open(os.path.join(DIST, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n")
 print("built", [p[0] for p in PAGES])

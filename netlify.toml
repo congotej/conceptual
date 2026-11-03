@@ -11,3 +11,15 @@
   for = "/media/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
+
+# Send the Netlify subdomain and www to the main address
+[[redirects]]
+  from = "https://delightful-cuchufli-bf51cc.netlify.app/*"
+  to = "https://conceptualusa.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.conceptualusa.com/*"
+  to = "https://conceptualusa.com/:splat"
+  status = 301
+  force = true
