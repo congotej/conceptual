@@ -75,6 +75,7 @@ FOOTER = f'''<footer class="site-foot">
         <ul>
           <li><a href="contact.html">{t("Schedule a consultation", "Agenda una consulta")}</a></li>
           <li><a href="https://www.instagram.com/conceptualusa/" target="_blank" rel="noopener">Instagram @conceptualusa</a></li>
+          <li><a href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">{t("Furniture partner", "Aliado en mobiliario")} @conceptualfurniture</a></li>
           <li><a href="tel:+17542456323">754-245-6323</a></li>
           <li><a href="https://wa.me/17542456323" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="mailto:clavegiraldo@hotmail.com">clavegiraldo@hotmail.com</a></li>
@@ -325,7 +326,7 @@ idp = f'''<section class="intro">
         <p class="muted">{t("Room planning, palette and material direction, from one room to a whole home.", "Planificación de espacios, paleta y dirección de materiales, de un espacio a la casa completa.")}</p></div></figure>
       <figure><div class="stack" style="gap:14px">{ph("orl-r1.jpg", "Dining table with upholstered chairs beneath a globe chandelier")}
         <h3>{t("Furnishings", "Mobiliario")}</h3>
-        <p class="muted">{t("Furniture selected for scale, comfort and the way you use the room, sourced through our partner studio Conceptual Furniture in Colombia.", "Muebles elegidos por escala, comodidad y la forma en que usas el espacio, a través de nuestro estudio aliado Conceptual Furniture en Colombia.")}</p></div></figure>
+        <p class="muted">{t("Furniture selected for scale, comfort and the way you use the room, sourced through our furniture partner, Conceptual Furniture.", "Muebles elegidos por escala, comodidad y la forma en que usas el espacio, a través de nuestro aliado en mobiliario, Conceptual Furniture.")}</p></div></figure>
       <figure><div class="stack" style="gap:14px">{ph("orl25.jpg", "Lit shelving styled with ceramics beside a sculptural armchair")}
         <h3>{t("Styling &amp; curated sourcing", "Ambientación y selección de piezas")}</h3>
         <p class="muted">{t("The finishing layer: accessories, objects and arrangements sourced and placed for you.", "La última capa: accesorios, objetos y arreglos seleccionados y ubicados por nosotros.")}</p></div></figure>
@@ -341,6 +342,19 @@ idp = f'''<section class="intro">
       <h2>{t("A warm modern home, furnished end to end.", "Un hogar moderno y cálido, amueblado de principio a fin.")}</h2>
       <p class="lede">{t("Living, dining and kitchen spaces designed by Claudia and furnished with pieces from Conceptual Furniture: soft curved sofas, oak and natural textures in a quiet neutral palette.", "Sala, comedor y cocina diseñados por Claudia y amueblados con piezas de Conceptual Furniture: sofás curvos y suaves, roble y texturas naturales en una paleta neutra y serena.")}</p>
       <div class="btns"><a class="textlink" href="portfolio.html#orlando">{t("See the project", "Ver el proyecto")}</a> <a class="textlink" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">@conceptualfurniture</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="furniture" style="padding-block:clamp(48px,7vw,88px)">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0;align-items:center">
+      <div class="stack">
+        <div class="label">{t("Furniture partner", "Aliado en mobiliario")}</div>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem)">Conceptual Furniture</h2>
+        <p class="muted narrow">{t("For furnishing projects we source pieces through Conceptual Furniture, which has a store in Colombia. Sofas, dining, chairs and accent pieces are selected for each home and coordinated by our studio from order to delivery.", "Para los proyectos de mobiliario seleccionamos piezas a través de Conceptual Furniture, que tiene tienda en Colombia. Sofás, comedores, sillas y piezas decorativas se eligen para cada hogar y nuestro estudio coordina todo, del pedido a la entrega.")}</p>
+      </div>
+      <a class="btn line" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">{t("See their collection", "Ver su colección")}</a>
     </div>
   </div>
 </section>
@@ -480,7 +494,7 @@ pf = f'''<section class="intro">
     <div class="sec-head" style="margin-bottom:0">
       <div class="stack">
         <h2>{t("Orlando residence", "Residencia en Orlando")}</h2>
-        <p class="muted narrow">{t("Interior design and furnishings for a single-story modern home: open living and dining, kitchen and covered terrace, furnished in collaboration with Conceptual Furniture in Colombia.", "Diseño interior y mobiliario para una casa moderna de un piso: sala y comedor abiertos, cocina y terraza, amueblada en colaboración con Conceptual Furniture en Colombia.")}</p>
+        <p class="muted narrow">{t("Interior design and furnishings for a single-story modern home: open living and dining, kitchen and covered terrace, furnished with pieces sourced through Conceptual Furniture.", "Diseño interior y mobiliario para una casa moderna de un piso: sala y comedor abiertos, cocina y terraza, amueblada con piezas seleccionadas a través de Conceptual Furniture.")}</p>
       </div>
       <dl class="project-meta">
         <div><dt>{t("Scope", "Alcance")}</dt><dd>{t("Interior design · Furnishings", "Diseño interior · Mobiliario")}</dd></div>
@@ -531,7 +545,7 @@ ab = f'''<section class="intro">
     <div class="grid3" style="align-items:start">
       <div class="stack"><div class="label">{t("Point of view", "Visión")}</div><h3>{t("Natural and architectural", "Natural y arquitectónico")}</h3><p class="muted">{t("Warm neutrals, real materials and light that changes through the day.", "Neutros cálidos, materiales reales y luz que cambia durante el día.")}</p></div>
       <div class="stack"><div class="label">{t("Craftsmanship", "Oficio")}</div><h3>{t("Made to measure", "Hecho a la medida")}</h3><p class="muted">{t("Every treatment is specified for its window, sewn to size and installed by our team.", "Cada cortina se diseña para su ventana, se confecciona a la medida y la instala nuestro equipo.")}</p></div>
-      <div class="stack"><div class="label">{t("Service areas", "Zonas de servicio")}</div><h3>{t("South Florida &amp; Orlando", "Sur de la Florida y Orlando")}</h3><p class="muted">{t("We work in English and Spanish, with furniture sourced through Conceptual Furniture in Colombia.", "Trabajamos en español e inglés, con mobiliario a través de Conceptual Furniture en Colombia.")}</p></div>
+      <div class="stack"><div class="label">{t("Service areas", "Zonas de servicio")}</div><h3>{t("South Florida &amp; Orlando", "Sur de la Florida y Orlando")}</h3><p class="muted">{t("We work in English and Spanish, with furniture sourced through our partner Conceptual Furniture.", "Trabajamos en español e inglés, con mobiliario a través de nuestro aliado Conceptual Furniture.")}</p></div>
     </div>
   </div>
 </section>
