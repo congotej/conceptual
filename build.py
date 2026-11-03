@@ -352,9 +352,9 @@ idp = f'''<section class="intro">
       <div class="stack">
         <div class="label">{t("Partner studio", "Estudio aliado")}</div>
         <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem)">Conceptual Furniture</h2>
-        <p class="muted narrow">{t("Conceptual Furniture is our partner studio, with a store in Colombia. For furnishing projects we source pieces through them. Sofas, dining, chairs and accent pieces are selected for each home and coordinated by our studio from order to delivery.", "Conceptual Furniture es nuestro estudio aliado, con tienda en Colombia. Para los proyectos de mobiliario seleccionamos piezas a través de ellos. Sofás, comedores, sillas y piezas decorativas se eligen para cada hogar y nuestro estudio coordina todo, del pedido a la entrega.")}</p>
+        <p class="muted narrow">{t("Conceptual Furniture is our partner studio, with a concept store in Medellín, Colombia. For furnishing projects we source pieces through them. Sofas, dining, chairs and accent pieces are selected for each home and coordinated by our studio from order to delivery.", "Conceptual Furniture es nuestro estudio aliado, con su concept store en Medellín, Colombia. Para los proyectos de mobiliario seleccionamos piezas a través de ellos. Sofás, comedores, sillas y piezas decorativas se eligen para cada hogar y nuestro estudio coordina todo, del pedido a la entrega.")}</p>
       </div>
-      <a class="btn line" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">{t("See their collection", "Ver su colección")}</a>
+      <div class="btns"><a class="btn line" href="https://www.conceptual.com.co" target="_blank" rel="noopener">{t("Visit Conceptual", "Visitar Conceptual")}</a><a class="textlink" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">@conceptualfurniture</a></div>
     </div>
   </div>
 </section>
