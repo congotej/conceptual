@@ -189,7 +189,7 @@ home = f'''<section class="hero">
       </a>
       <div class="feature-side">
         <a class="card small" href="interior-design.html">
-          {ph("orl-r2.jpg", "Curved linen sofas around a round oak coffee table in an Orlando living room")}
+          {ph("orl-living.jpg", "Sunlit living and dining room with boucle armchairs, channel-tufted sofas and oak slat screens", "32% 50%")}
           <div class="stack" style="gap:12px">
             <h3>{t("Interior design &amp; furnishings", "Diseño interior y mobiliario")}</h3>
             <p>{t("Design direction, furniture and curated sourcing for a single room or a whole home.", "Dirección de diseño, mobiliario y selección de piezas para un espacio o la casa completa.")}</p>
