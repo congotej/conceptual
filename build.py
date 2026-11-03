@@ -163,6 +163,7 @@ home = f'''<section class="hero">
       <div class="label">{t("Thoughtfully designed. Beautifully lived.", "Pensado con detalle. Hecho para vivirse.")}</div>
       <h1>{t("Custom window treatments, thoughtfully designed for your space.", "Cortinas a la medida, pensadas para tu espacio.")}</h1>
       <p class="lede">{t("From fabric selection to installation, every detail is considered.", "Desde la selección de la tela hasta la instalación, cada detalle está pensado.")}</p>
+      <div class="label">{t("Over 20 years in South Florida", "Más de 20 años en el Sur de la Florida")}</div>
       <div class="btns">
         <a class="btn solid" href="contact.html">{t("Schedule a consultation", "Agenda una consulta")}</a>
         <a class="btn line" href="portfolio.html">{t("Explore our work", "Ver nuestro trabajo")}</a>
@@ -342,6 +343,15 @@ idp = f'''<section class="intro">
       <h2>{t("A warm modern home, furnished end to end.", "Un hogar moderno y cálido, amueblado de principio a fin.")}</h2>
       <p class="lede">{t("Living, dining and kitchen spaces designed by Conceptual and furnished with pieces from Conceptual Furniture: soft curved sofas, oak and natural textures in a quiet neutral palette.", "Sala, comedor y cocina diseñados por Conceptual y amueblados con piezas de Conceptual Furniture: sofás curvos y suaves, roble y texturas naturales en una paleta neutra y serena.")}</p>
       <div class="btns"><a class="textlink" href="portfolio.html#orlando">{t("See the project", "Ver el proyecto")}</a> <a class="textlink" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">@conceptualfurniture</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="renovations" style="padding-block:clamp(48px,7vw,88px) 0">
+  <div class="wrap">
+    <div class="stack narrow">
+      <div class="label">{t("Renovations &amp; remodeling", "Remodelaciones y renovaciones")}</div>
+      <p class="lede">{t("For renovations, additions and remodeling, we collaborate with <a href='https://www.lyconstructioninc.com' target='_blank' rel='noopener'>LY Construction, Inc.</a>, bringing interior design and construction together from concept to completion.", "Para remodelaciones, ampliaciones y renovaciones trabajamos junto a <a href='https://www.lyconstructioninc.com' target='_blank' rel='noopener'>LY Construction, Inc.</a>, uniendo el diseño interior y la construcción desde la idea hasta la entrega.")}</p>
     </div>
   </div>
 </section>
@@ -526,17 +536,18 @@ pf = f'''<section class="intro">
 ab = f'''<section class="intro">
   <div class="wrap stack">
     <div class="label">{t("About", "Nosotros")}</div>
-    <h1>{t("Claudia Vélez, founder and designer.", "Claudia Vélez, fundadora y diseñadora.")}</h1>
+    <h1>{t("Meet Claudia Vélez", "Conoce a Claudia Vélez")}</h1>
+    <p class="lede">{t("Founder &amp; Interior Designer", "Fundadora y diseñadora de interiores")}</p>
   </div>
 </section>
 <section style="padding-top:0">
   <div class="wrap split">
     <div class="media">{'<img src="img/dsc00682.jpg" alt="Claudia Vélez reviewing fabric samples" style="object-position:45% 40%">'}</div>
     <div class="stack narrow">
-      <p class="quote">{t("Warm. Refined. Timeless.", "Cálido. Refinado. Atemporal.")}</p>
-      <p>{t("Conceptual Interiors designs custom window treatments and interiors that feel natural, calm and made for the people who live in them.", "Conceptual Interiors diseña cortinas a la medida e interiores que se sienten naturales, serenos y hechos para quienes los viven.")}</p>
-      <p>{t("Claudia leads every project herself, from the first walk-through to the final fold of fabric. She measures, selects the materials with you, and oversees the installation, so the result matches what you saw at the consultation.", "Claudia lidera cada proyecto personalmente, desde la primera visita hasta el último pliegue de la tela. Mide, elige los materiales contigo y supervisa la instalación, para que el resultado sea lo que viste en la consulta.")}</p>
-      <!-- TODO: replace with Claudia's own words / bio -->
+      <p>{t("With over 20 years of experience in South Florida, Claudia Vélez brings a thoughtful, personalized approach to creating beautiful, functional living spaces.", "Con más de 20 años de experiencia en el Sur de la Florida, Claudia Vélez aporta una mirada cuidadosa y personalizada para crear espacios bellos y funcionales.")}</p>
+      <p>{t("She specializes in custom window treatments: drapery, sheers, shades, blackout and motorized systems, chosen with a deep understanding of fabric, light and how each room is lived in. Beyond the windows, she designs and furnishes single rooms and entire homes, from space planning and furniture selection to finishes and decorative details.", "Se especializa en cortinas a la medida: cortinas, velos, persianas, blackout y sistemas motorizados, elegidos con un profundo conocimiento de las telas, la luz y la forma en que se vive cada espacio. Más allá de las ventanas, diseña y amuebla espacios individuales y casas completas, desde la distribución y la selección de muebles hasta los acabados y los detalles decorativos.")}</p>
+      <p>{t("For renovations, additions and remodeling, Claudia collaborates with <a href='https://www.lyconstructioninc.com' target='_blank' rel='noopener'>LY Construction, Inc.</a>, bringing interior design and construction together from concept to completion.", "Para remodelaciones, ampliaciones y renovaciones, Claudia trabaja junto a <a href='https://www.lyconstructioninc.com' target='_blank' rel='noopener'>LY Construction, Inc.</a>, uniendo el diseño interior y la construcción desde la idea hasta la entrega.")}</p>
+      <p class="quote">{t("“Every home should reflect the people who live in it.”", "“Cada hogar debe reflejar a las personas que lo habitan.”")}</p>
     </div>
   </div>
 </section>

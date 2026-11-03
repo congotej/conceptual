@@ -15,5 +15,4 @@ To change anything: edit `build.py`, `styles.css` or the images, run `python3 bu
 - The contact form uses Netlify Forms. Under Site settings → Forms → Notifications, add an email notification to clavegiraldo@hotmail.com.
 
 ## Still to confirm before launch
-- Claudia's bio in her own words (About page, marked TODO in build.py).
 - Live at https://conceptualusa.com (domain registered in Netlify).
