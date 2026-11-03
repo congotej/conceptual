@@ -340,7 +340,7 @@ idp = f'''<section class="intro">
     <div class="stack narrow">
       <div class="label">{t("Featured project · Orlando", "Proyecto destacado · Orlando")}</div>
       <h2>{t("A warm modern home, furnished end to end.", "Un hogar moderno y cálido, amueblado de principio a fin.")}</h2>
-      <p class="lede">{t("Living, dining and kitchen spaces designed by Claudia and furnished with pieces from Conceptual Furniture: soft curved sofas, oak and natural textures in a quiet neutral palette.", "Sala, comedor y cocina diseñados por Claudia y amueblados con piezas de Conceptual Furniture: sofás curvos y suaves, roble y texturas naturales en una paleta neutra y serena.")}</p>
+      <p class="lede">{t("Living, dining and kitchen spaces designed by Conceptual and furnished with pieces from Conceptual Furniture: soft curved sofas, oak and natural textures in a quiet neutral palette.", "Sala, comedor y cocina diseñados por Conceptual y amueblados con piezas de Conceptual Furniture: sofás curvos y suaves, roble y texturas naturales en una paleta neutra y serena.")}</p>
       <div class="btns"><a class="textlink" href="portfolio.html#orlando">{t("See the project", "Ver el proyecto")}</a> <a class="textlink" href="https://www.instagram.com/conceptualfurniture/" target="_blank" rel="noopener">@conceptualfurniture</a></div>
     </div>
   </div>
