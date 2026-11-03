@@ -70,10 +70,37 @@
         msg('Preview only: this form will send inquiries once the site is live.', 'Vista previa: este formulario enviará solicitudes cuando el sitio esté publicado.');
         return;
       }
-      var data = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data })
-        .then(function (r) {
-          if (!r.ok) throw new Error(r.status);
+      var fd = new FormData(form);
+      var data = new URLSearchParams(fd).toString();
+      // 1) Keep a copy in the Netlify dashboard (Forms → inquiry). Failure here does not block sending.
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data }).catch(function () {});
+      // 2) Email the inquiry straight to Claudia through FormSubmit.
+      var services = fd.getAll('service').join(', ');
+      var payload = {
+        _subject: 'New inquiry from the website: ' + (fd.get('name') || ''),
+        _template: 'table',
+        _captcha: 'false',
+        _replyto: fd.get('email') || '',
+        Name: fd.get('name') || '',
+        Email: fd.get('email') || '',
+        Phone: fd.get('phone') || '',
+        'Project location': fd.get('location') || '',
+        Services: services,
+        Timeline: fd.get('timeline') || '',
+        Budget: fd.get('budget') || 'Prefer not to say',
+        'Preferred contact': fd.get('contact_method') || '',
+        Message: fd.get('message') || '',
+        Language: root.getAttribute('data-lang') === 'es' ? 'Español' : 'English'
+      };
+      if (fd.get('company')) return; // honeypot filled: likely spam, drop silently
+      fetch('https://formsubmit.co/ajax/clavegiraldo@hotmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          if (!res.ok || String(res.j && res.j.success) !== 'true') throw new Error('send failed');
           form.reset();
           msg('Thank you. Your inquiry was sent and we will be in touch soon.', 'Gracias. Tu solicitud fue enviada y te contactaremos pronto.');
         })
