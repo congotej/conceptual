@@ -1,0 +1,13 @@
+# Netlify serves the prebuilt site in /dist. Run `python3 build.py` locally (or ask Claude) to regenerate it.
+[build]
+  publish = "dist"
+  command = ""
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

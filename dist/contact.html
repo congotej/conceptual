@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Conceptual Interiors</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Schedule a consultation with Conceptual Interiors.">
+<link rel="icon" href="brand/favicon-32.png" sizes="32x32"><link rel="icon" href="brand/logo-full.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="logo" href="index.html" aria-label="Conceptual Interiors, home">
+      <img class="mark" src="brand/logo-mark.svg" alt="" width="60" height="33">
+      <span class="word"><b>CONCEPTUAL</b><span>INTERIORS</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+<a href="window-treatments.html"><span class="en">Window Treatments</span><span class="es">Cortinas y persianas</span></a>
+<a href="interior-design.html"><span class="en">Interior Design</span><span class="es">Diseño interior</span></a>
+<a href="portfolio.html"><span class="en">Portfolio</span><span class="es">Portafolio</span></a>
+<a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
+<a href="contact.html" aria-current="page"><span class="en">Contact</span><span class="es">Contacto</span></a>
+    </nav>
+    <div class="head-tools">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-es" data-set="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn solid head-cta" href="contact.html"><span class="en">Schedule a consultation</span><span class="es">Agenda una consulta</span></a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span class="en">Menu</span><span class="es">Menú</span></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="intro">
+  <div class="wrap stack">
+    <div class="label"><span class="en">Contact</span><span class="es">Contacto</span></div>
+    <h1><span class="en">Schedule a consultation</span><span class="es">Agenda una consulta</span></h1>
+    <p class="lede"><span class="en">Tell us a little about your project and we'll be in touch to arrange a visit.</span><span class="es">Cuéntanos un poco de tu proyecto y te contactaremos para coordinar una visita.</span></p>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="wrap contact-grid">
+    <aside class="contact-aside">
+      <dl>
+        <div><dt><span class="en">Phone</span><span class="es">Teléfono</span></dt><dd><a href="tel:+17542456323">754-245-6323</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/17542456323" target="_blank" rel="noopener">754-245-6323</a></dd></div>
+        <div><dt><span class="en">Email</span><span class="es">Correo</span></dt><dd><a href="mailto:clavegiraldo@hotmail.com" style="word-break:break-all">clavegiraldo@hotmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/conceptualusa/" target="_blank" rel="noopener">@conceptualusa</a></dd></div>
+        <div><dt><span class="en">Service area</span><span class="es">Zona de servicio</span></dt><dd><span class="en">South Florida &amp; Orlando</span><span class="es">Sur de la Florida y Orlando</span></dd></div>
+        <div><dt><span class="en">Languages</span><span class="es">Idiomas</span></dt><dd>English · Español</dd></div>
+      </dl>
+      <hr class="rule">
+      <p class="muted" style="font-size:.92rem"><span class="en">A photo of the room helps. You can send it by WhatsApp after you submit this form.</span><span class="es">Una foto del espacio ayuda. Puedes enviarla por WhatsApp después de enviar el formulario.</span></p>
+    </aside>
+    <form class="form" id="inquiry" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
+      <input type="hidden" name="form-name" value="inquiry">
+      <p hidden><label>Leave empty <input name="company" id="company"></label></p>
+      <div class="field"><label for="f-name"><span class="en">Name</span><span class="es">Nombre</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email"><span class="en">Email</span><span class="es">Correo</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-phone"><span class="en">Phone</span><span class="es">Teléfono</span> <span class="opt"><span class="en">(optional)</span><span class="es">(opcional)</span></span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="f-location"><span class="en">Project location</span><span class="es">Ubicación del proyecto</span></label><input id="f-location" name="location" placeholder="City / neighborhood" data-ph-en="City / neighborhood" data-ph-es="Ciudad / barrio" required></div>
+      <fieldset class="field full">
+        <legend><span class="en">Service</span><span class="es">Servicio</span></legend>
+        <div class="choices">
+          <label><input type="checkbox" id="s-wt" name="service" value="Window treatments" checked> <span class="en">Window treatments</span><span class="es">Cortinas y persianas</span></label>
+          <label><input type="checkbox" id="s-mo" name="service" value="Motorization"> <span class="en">Motorization</span><span class="es">Motorización</span></label>
+          <label><input type="checkbox" id="s-id" name="service" value="Interior design"> <span class="en">Interior design</span><span class="es">Diseño interior</span></label>
+          <label><input type="checkbox" id="s-fu" name="service" value="Furnishings"> <span class="en">Furnishings</span><span class="es">Mobiliario</span></label>
+          <label><input type="checkbox" id="s-se" name="service" value="Seasonal styling"> <span class="en">Seasonal styling</span><span class="es">Decoración de temporada</span></label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-timeline"><span class="en">Timeline</span><span class="es">Tiempo estimado</span></label>
+        <select id="f-timeline" name="timeline" class="i18n-select">
+          <option value="asap" data-en="As soon as possible" data-es="Lo antes posible">As soon as possible</option>
+          <option value="1-3m" data-en="Within 1–3 months" data-es="En 1–3 meses">Within 1–3 months</option>
+          <option value="3m+" data-en="3+ months" data-es="Más de 3 meses">3+ months</option>
+          <option value="exploring" data-en="Just exploring" data-es="Solo explorando">Just exploring</option>
+        </select></div>
+      <div class="field"><label for="f-budget"><span class="en">Budget</span><span class="es">Presupuesto</span> <span class="opt"><span class="en">(optional)</span><span class="es">(opcional)</span></span></label>
+        <select id="f-budget" name="budget" class="i18n-select">
+          <option value="" data-en="Prefer not to say" data-es="Prefiero no decir">Prefer not to say</option>
+          <option value="under-5k" data-en="Under $5,000" data-es="Menos de $5,000">Under $5,000</option>
+          <option value="5-15k" data-en="$5,000–$15,000" data-es="$5,000–$15,000">$5,000–$15,000</option>
+          <option value="15-40k" data-en="$15,000–$40,000" data-es="$15,000–$40,000">$15,000–$40,000</option>
+          <option value="40k+" data-en="$40,000+" data-es="Más de $40,000">$40,000+</option>
+        </select></div>
+      <fieldset class="field full">
+        <legend><span class="en">Preferred contact method</span><span class="es">Método de contacto preferido</span></legend>
+        <div class="choices">
+          <label><input type="radio" id="c-email" name="contact_method" value="Email" checked> <span class="en">Email</span><span class="es">Correo</span></label>
+          <label><input type="radio" id="c-phone" name="contact_method" value="Phone"> <span class="en">Phone call</span><span class="es">Llamada</span></label>
+          <label><input type="radio" id="c-wa" name="contact_method" value="WhatsApp"> WhatsApp</label>
+        </div>
+      </fieldset>
+      <div class="field full"><label for="f-msg"><span class="en">Tell us about your project</span><span class="es">Cuéntanos de tu proyecto</span></label><textarea id="f-msg" name="message"></textarea></div>
+      <label class="consent full"><input type="checkbox" id="f-consent" name="consent" required> <span><span class="en">I agree to be contacted by Conceptual Interiors about this inquiry.</span><span class="es">Acepto que Conceptual Interiors me contacte sobre esta solicitud.</span></span></label>
+      <div class="full btns"><button class="btn solid" type="submit"><span class="en">Send inquiry</span><span class="es">Enviar solicitud</span></button></div>
+      <p class="form-status full" id="form-status" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" aria-label="Conceptual Interiors, home"><img class="lockup" src="brand/logo-lockup.svg" alt="Conceptual Interiors" width="182" height="140"></a>
+        <p class="foot-tag"><span class="en">Thoughtfully designed.<br>Beautifully lived.</span><span class="es">Pensado con detalle.<br>Hecho para vivirse.</span></p>
+      </div>
+      <div>
+        <h4><span class="en">Window treatments</span><span class="es">Cortinas</span></h4>
+        <ul>
+          <li><a href="window-treatments.html#drapery"><span class="en">Custom drapery</span><span class="es">Cortinas a la medida</span></a></li>
+          <li><a href="window-treatments.html#sheers"><span class="en">Sheer curtains</span><span class="es">Velos</span></a></li>
+          <li><a href="window-treatments.html#shades"><span class="en">Shades &amp; blackout</span><span class="es">Persianas y blackout</span></a></li>
+          <li><a href="window-treatments.html#motorization"><span class="en">Motorization</span><span class="es">Motorización</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="en">Studio</span><span class="es">Estudio</span></h4>
+        <ul>
+          <li><a href="interior-design.html"><span class="en">Interior design</span><span class="es">Diseño interior</span></a></li>
+          <li><a href="portfolio.html"><span class="en">Portfolio</span><span class="es">Portafolio</span></a></li>
+          <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="en">Contact</span><span class="es">Contacto</span></h4>
+        <ul>
+          <li><a href="contact.html"><span class="en">Schedule a consultation</span><span class="es">Agenda una consulta</span></a></li>
+          <li><a href="https://www.instagram.com/conceptualusa/" target="_blank" rel="noopener">Instagram @conceptualusa</a></li>
+          <li><a href="tel:+17542456323">754-245-6323</a></li>
+          <li><a href="https://wa.me/17542456323" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:clavegiraldo@hotmail.com">clavegiraldo@hotmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Conceptual Interiors</span>
+      <span><span class="en">Custom window treatments &amp; interior design</span><span class="es">Cortinas a la medida y diseño interior</span></span>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta"><a class="btn solid" href="contact.html"><span class="en">Schedule a consultation</span><span class="es">Agenda una consulta</span></a></div>
+<script src="site.js"></script>
+</body>
+</html>
