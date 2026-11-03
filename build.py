@@ -231,7 +231,7 @@ home = f'''<section class="hero">
 <section>
   <div class="wrap split">
     <figure class="vid wide">
-      <video src="media/motorized.mp4" poster="media/motorized-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Remote closing a motorized linen sheer across a double-height window"></video>
+      <video src="media/home-video.mp4" poster="media/home-video-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Remote closing a motorized linen sheer across a double-height window"></video>
     </figure>
     <div class="stack narrow">
       <div class="label">{t("Motorization", "Motorización")}</div>
