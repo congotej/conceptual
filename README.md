@@ -16,5 +16,4 @@ To change anything: edit `build.py`, `styles.css` or the images, run `python3 bu
 
 ## Still to confirm before launch
 - Claudia's bio in her own words (About page, marked TODO in build.py).
-- Photo usage rights for the Orlando and Pinecrest projects.
 - Live at https://conceptualusa.com (domain registered in Netlify).
