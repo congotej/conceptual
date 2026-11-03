@@ -142,7 +142,7 @@ PROCESS = f'''<ol class="steps">
     <div class="n">{t("Consult", "Consulta")}</div>
     <h3>{t("Walk the space", "Recorremos el espacio")}</h3>
     <p>{t("We look at the light, the views and how you live in each room.", "Vemos la luz, las vistas y cómo vives cada espacio.")}</p></li>
-  <li>{ph("measure-window.jpg", "Claudia measuring a sliding glass door with a tape measure", "52% 50%")}
+  <li>{ph("measure-window-v2.jpg", "Claudia measuring a sliding glass door with a tape measure", "52% 50%")}
     <div class="n">{t("Measure", "Medición")}</div>
     <h3>{t("Measure precisely", "Medimos con precisión")}</h3>
     <p>{t("Every opening, ceiling height and clearance is recorded before anything is ordered.", "Cada vano, altura y espacio libre se registra antes de pedir cualquier cosa.")}</p></li>
