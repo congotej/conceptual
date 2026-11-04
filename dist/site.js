@@ -20,6 +20,16 @@
     b.addEventListener('click', function () { setLang(b.dataset.set); });
   });
 
+  // Mobile: hide the sticky consultation bar while the hero's own buttons are on screen, and on the contact page
+  var bar = document.querySelector('.mobile-cta'), heroBtns = document.querySelector('.hero .btns');
+  if (bar && document.getElementById('inquiry')) bar.classList.add('away');
+  else if (bar && heroBtns) {
+    var sync = function () { bar.classList.toggle('away', heroBtns.getBoundingClientRect().bottom > 0); };
+    sync();
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+  }
+
   // Mobile menu
   var mb = document.getElementById('menu-btn'), nav = document.getElementById('site-nav');
   if (mb && nav) mb.addEventListener('click', function () {

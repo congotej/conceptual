@@ -305,7 +305,7 @@ wt = f'''<section class="intro">
        "Beautiful views, effortlessly controlled. Quiet motors open and close tall or hard-to-reach treatments from a remote.",
        "Vistas hermosas, controladas sin esfuerzo. Motores silenciosos abren y cierran cortinas altas o difíciles de alcanzar desde un control remoto.",
        [("Motorized drapery tracks and shades", "Rieles y persianas motorizadas"), ("Remote control with saved positions", "Control remoto con posiciones guardadas"), ("Ideal for double-height windows", "Ideal para ventanas de doble altura")],
-       ['<figure class="vid wide" style="margin:0"><video src="media/motorized.mp4" poster="media/motorized-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Remote closing a motorized linen sheer across a double-height window"></video></figure>'], one=True)}
+       ['<figure class="vid wide" style="margin:0"><video src="media/home-video.mp4" poster="media/home-video-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Remote closing a motorized linen sheer across a double-height window"></video></figure>'], one=True)}
   </div>
 </section>
 {cta_band()}'''
