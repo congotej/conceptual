@@ -88,33 +88,24 @@ def holiday_body(t):
             f'<button type="button" class="hc-ph" aria-label="{en}"><img src="img/hol-cm-h{i:02d}.jpg" alt="{en}" loading="lazy"></button>'
             f'<div class="hc-meta"><div class="hc-code">{code}</div><h3>{t(en, es)}</h3><p class="hc-size">{t(sen, ses)}</p><p class="hc-price">${price}</p>'
             f'<button type="button" class="hc-add" data-code="{code}">{t("+ Select", "+ Elegir")}</button></div></article>')
-    chips = (f'<button type="button" data-filter="all" aria-pressed="true">{t("All", "Todo")} <i>{len(ITEMS)}</i></button>'
-             + "".join(f'<button type="button" data-filter="{c}" aria-pressed="false">{t(en, es)} <i>{len(cards[c])}</i></button>'
+    chips = (f'<button type="button" data-filter="all" aria-pressed="true">{t("All", "Todo")}</button>'
+             + "".join(f'<button type="button" data-filter="{c}" aria-pressed="false">{t(en, es)}</button>'
                        for c, en, es, _ in COLLECTIONS))
     sections = "".join(
         f'<div class="hc-col" data-col="{c}"><div class="hc-col-head"><div><h2>{t(en, es)}</h2>'
         f'<p class="hc-from">{t(f"From ${frm}", f"Desde ${frm}")}</p></div>'
-        f'<span class="label">{len(cards[c])} {t("pieces", "piezas")}</span></div>'
+        f'</div>'
         f'<div class="hc-grid">{"".join(cards[c])}</div></div>'
         for c, en, es, frm in COLLECTIONS)
-    return f'''<section class="intro hc-intro">
-  <div class="wrap hc-hero">
-    <div class="stack">
-      <div class="label">{t("Holiday 2026 · Special order", "Navidad 2026 · Por encargo")}</div>
+    return f'''<section class="hc-top">
+  <div class="wrap hc-top-row">
+    <div class="hc-top-copy">
+      <div class="label">{t("Holiday 2026", "Navidad 2026")}</div>
       <h1>{t("The Holiday Collection", "La Colección Navideña")}</h1>
-      <p class="lede">{t(f"{len(ITEMS)} pieces chosen by Claudia for this season: pinecone ornaments, mercury and antique glass, gilded accents and lifelike greenery in warm golds, burgundy and woodland pine.", f"{len(ITEMS)} piezas escogidas por Claudia para esta temporada: piñas decorativas, vidrio mercurio y antiguo, detalles dorados y follaje realista en dorados cálidos, borgoña y verde pino.")}</p>
-      <p class="muted">{t("Pieces are ordered for you. Choose what you love, send us your selection, and we'll confirm availability and delivery.", "Las piezas se piden para ti. Elige lo que te guste, envíanos tu selección y te confirmamos disponibilidad y entrega.")}</p>
-      <div class="btns"><a class="btn solid" href="#collection">{t("View the collection", "Ver la colección")}</a><button type="button" class="btn line" data-open-sel>{t("My selection", "Mi selección")}</button></div>
+      <p class="muted">{t("Pick your pieces and send your list on WhatsApp. Christmas trees and custom orders available, just ask.", "Elige tus piezas y envía tu lista por WhatsApp. También tenemos árboles de Navidad y pedidos personalizados, ¡pregúntanos!")}</p>
     </div>
     <div class="hc-hero-art">{"".join(f'<div><img src="img/hol-cm-h{n:02d}.jpg" alt=""></div>' for n in hero)}</div>
   </div>
-</section>
-<section class="hc-how">
-  <div class="wrap"><ol class="hc-steps">
-    <li><b>1</b><span><strong>{t("Browse", "Explora")}</strong>{t("Tap any piece to see it up close.", "Toca cualquier pieza para verla de cerca.")}</span></li>
-    <li><b>2</b><span><strong>{t("Select", "Elige")}</strong>{t("Add the pieces you love to your selection.", "Agrega a tu selección las piezas que te gusten.")}</span></li>
-    <li><b>3</b><span><strong>{t("Request", "Solicita")}</strong>{t("Send your list and we'll confirm availability.", "Envíanos tu lista y te confirmamos disponibilidad.")}</span></li>
-  </ol></div>
 </section>
 <section id="collection" class="hc-shop">
   <div class="hc-bar"><div class="wrap hc-bar-row"><div class="filters hc-filters">{chips}</div>

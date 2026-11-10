@@ -328,3 +328,18 @@ body.hc-lock{overflow:hidden}
 .hc-avail{font-size:.8rem;color:var(--ci-taupe-soft);margin-top:-4px}
 .hc-meta .hc-price{margin-top:auto;padding-top:4px}
 .hc-meta .hc-price + .hc-add{margin-top:0}
+/* Holiday page: compact top so products show first */
+.hc-top{padding-block:clamp(28px,4vw,56px) clamp(12px,2vw,24px)}
+.hc-top-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,5vw,64px);align-items:center}
+.hc-top-copy{display:grid;gap:14px}
+.hc-top h1{font-size:clamp(2.1rem,5vw,3.6rem)}
+.hc-top .muted{max-width:56ch}
+.hc-top .hc-hero-art div{aspect-ratio:3/4;padding:10px}
+@media (max-width:700px){
+  .hc-top-row{grid-template-columns:1fr}
+  .hc-top .hc-hero-art{display:none}
+  .hc-top .muted{font-size:.92rem;line-height:1.6}
+  .hc-col{padding-top:28px}
+  .hc-col-head{margin-bottom:14px}
+  .hc-col-head h2{font-size:1.9rem}
+}
