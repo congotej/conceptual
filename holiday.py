@@ -3,6 +3,7 @@ Images live in img/hol-cm-hNN.jpg. Item order fixes each piece's code (CM-H01 �
 
 # (id, name EN, name ES, starting price shown on the page)
 COLLECTIONS = [
+    ("trees", "Christmas Trees", "Árboles de Navidad", 649),
     ("pinecone", "Pinecone Collection", "Colección de piñas", 10),
     ("glass", "Mercury &amp; Antique Glass", "Vidrio mercurio y antiguo", 9),
     ("natural", "Natural &amp; Gilded", "Natural y dorado", 8),
@@ -69,11 +70,12 @@ ITEMS = [
     ("greenery", "Trailing Whitewashed Cone Branch", "Rama colgante con piñas blanqueadas", "Cascading branch with brown, whitewashed mini cones.", "Rama en cascada con mini piñas café blanqueadas.", "39.5\" L", "39.5\" largo"),
     ("pinecone", "Champagne Star Petal Ball", "Bola de pétalos estrella champaña", "Clusters of star-shaped petals in soft champagne bronze.", "Racimos de pétalos en forma de estrella, en bronce champaña suave.", "5.5\" dia", "5.5\" diám."),
     ("pinecone", "Champagne Star Petal Cone", "Cono de pétalos estrella champaña", "The star-petal design in a hanging cone shape.", "El diseño de pétalos estrella en forma de cono colgante.", "6\" H × 3.5\" dia", "6\" alto × 3.5\" diám."),
+    ("trees", "Emerald Mixed Fir Pre-Lit Tree", "Árbol pre-iluminado de abeto mixto", "850 warm white LED lights, 1,497 realistic tips with pinecone accents, hinged branches and a metal stand. Ask about styling and installation.", "850 luces LED blanco cálido, 1.497 puntas realistas con piñas, ramas con bisagra y base metálica. Pregúntanos por la decoración e instalación.", "7.5' H × 62\" dia", "7.5' alto × 62\" diám."),
 ]
 
 
 # Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet: 2.2x under $5 cost, 2x for $5-10, 1.65x over $10)
-PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12]
+PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12, 649]
 assert len(PRICES) == len(ITEMS)
 
 
@@ -102,7 +104,7 @@ def holiday_body(t):
     <div class="hc-top-copy">
       <div class="label">{t("Holiday 2026", "Navidad 2026")}</div>
       <h1>{t("The Holiday Collection", "La Colección Navideña")}</h1>
-      <p class="muted">{t("Pick your pieces and send your list on WhatsApp. Christmas trees and custom orders available, just ask.", "Elige tus piezas y envía tu lista por WhatsApp. También tenemos árboles de Navidad y pedidos personalizados, ¡pregúntanos!")}</p>
+      <p class="muted">{t("Pick your pieces and send your list on WhatsApp. More tree sizes and custom orders available, just ask.", "Elige tus piezas y envía tu lista por WhatsApp. Más tamaños de árbol y pedidos personalizados, ¡pregúntanos!")}</p>
     </div>
     <div class="hc-hero-art">{"".join(f'<div><img src="img/hol-cm-h{n:02d}.jpg" alt=""></div>' for n in hero)}</div>
   </div>
