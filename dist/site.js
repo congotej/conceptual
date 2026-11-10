@@ -107,6 +107,7 @@
       document.getElementById('hc-lb-code').textContent = c.dataset.code;
       document.getElementById('hc-lb-name').textContent = nm(c.dataset.code);
       document.getElementById('hc-lb-desc').textContent = dec(c.dataset[L() === 'es' ? 'des' : 'den']);
+      document.getElementById('hc-lb-size').textContent = dec(c.dataset[L() === 'es' ? 'ses' : 'sen']);
       lb.hidden = false; lock(); render();
     };
     var closeLb = function () { lb.hidden = true; cur = null; lock(); };

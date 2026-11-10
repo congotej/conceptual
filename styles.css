@@ -317,3 +317,6 @@ body.hc-lock{overflow:hidden}
 }
 .hc-col-head .label{white-space:nowrap}
 #collection{scroll-margin-top:calc(77px + env(safe-area-inset-top,0px))}
+.hc-size{font-size:.78rem;color:var(--ci-taupe-soft);margin:-10px 0 14px;letter-spacing:.02em}
+.hc-lb-info .hc-size{margin:0}
+.hc-from{font:400 var(--s-label)/1.4 var(--ci-sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ci-camel);margin-top:10px}
