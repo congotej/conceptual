@@ -320,3 +320,11 @@ body.hc-lock{overflow:hidden}
 .hc-size{font-size:.78rem;color:var(--ci-taupe-soft);margin:-10px 0 14px;letter-spacing:.02em}
 .hc-lb-info .hc-size{margin:0}
 .hc-from{font:400 var(--s-label)/1.4 var(--ci-sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ci-camel);margin-top:10px}
+.hc-price{font:500 1.15rem/1 var(--ci-serif);color:var(--ci-taupe);margin:-6px 0 14px}
+.hc-lb-price{font-size:1.6rem;margin:0}
+.hc-row-price{display:block;font-size:.85rem;color:var(--ci-taupe-soft)}
+.hc-total{display:flex;justify-content:space-between;align-items:baseline;font-size:var(--s-label);letter-spacing:.22em;text-transform:uppercase}
+.hc-total b{font:500 1.6rem/1 var(--ci-serif);letter-spacing:0;color:var(--ci-taupe)}
+.hc-avail{font-size:.8rem;color:var(--ci-taupe-soft);margin-top:-4px}
+.hc-meta .hc-price{margin-top:auto;padding-top:4px}
+.hc-meta .hc-price + .hc-add{margin-top:0}

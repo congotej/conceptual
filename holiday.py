@@ -72,16 +72,21 @@ ITEMS = [
 ]
 
 
+# Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet, 2.2x markup)
+PRICES = [19, 28, 27, 20, 21, 29, 17, 28, 19, 28, 16, 18, 10, 16, 17, 14, 10, 16, 22, 9, 10, 18, 19, 11, 18, 14, 9, 9, 13, 15, 12, 16, 8, 31, 8, 12, 12, 25, 25, 70, 18, 16, 17, 6, 7, 15, 14, 21, 10, 10, 74, 26, 23, 17, 17, 24, 13]
+assert len(PRICES) == len(ITEMS)
+
+
 def holiday_body(t):
     hero = [1, 29, 35]
     cards = {}
-    for i, (c, en, es, den, des, sen, ses) in enumerate(ITEMS, 1):
+    for i, ((c, en, es, den, des, sen, ses), price) in enumerate(zip(ITEMS, PRICES), 1):
         code = f"CM-H{i:02d}"
         qen, qes = sen.replace('"', "&quot;"), ses.replace('"', "&quot;")
         cards.setdefault(c, []).append(
-            f'<article class="hc-card" data-code="{code}" data-en="{en}" data-es="{es}" data-den="{den}" data-des="{des}" data-sen="{qen}" data-ses="{qes}" data-cat="{c}">'
+            f'<article class="hc-card" data-code="{code}" data-en="{en}" data-es="{es}" data-den="{den}" data-des="{des}" data-sen="{qen}" data-ses="{qes}" data-price="{price}" data-cat="{c}">'
             f'<button type="button" class="hc-ph" aria-label="{en}"><img src="img/hol-cm-h{i:02d}.jpg" alt="{en}" loading="lazy"></button>'
-            f'<div class="hc-meta"><div class="hc-code">{code}</div><h3>{t(en, es)}</h3><p class="hc-size">{t(sen, ses)}</p>'
+            f'<div class="hc-meta"><div class="hc-code">{code}</div><h3>{t(en, es)}</h3><p class="hc-size">{t(sen, ses)}</p><p class="hc-price">${price}</p>'
             f'<button type="button" class="hc-add" data-code="{code}">{t("+ Select", "+ Elegir")}</button></div></article>')
     chips = (f'<button type="button" data-filter="all" aria-pressed="true">{t("All", "Todo")} <i>{len(ITEMS)}</i></button>'
              + "".join(f'<button type="button" data-filter="{c}" aria-pressed="false">{t(en, es)} <i>{len(cards[c])}</i></button>'
@@ -98,8 +103,8 @@ def holiday_body(t):
       <div class="label">{t("Holiday 2026 · Special order", "Navidad 2026 · Por encargo")}</div>
       <h1>{t("The Holiday Collection", "La Colección Navideña")}</h1>
       <p class="lede">{t(f"{len(ITEMS)} pieces chosen by Claudia for this season: pinecone ornaments, mercury and antique glass, gilded accents and lifelike greenery in warm golds, burgundy and woodland pine.", f"{len(ITEMS)} piezas escogidas por Claudia para esta temporada: piñas decorativas, vidrio mercurio y antiguo, detalles dorados y follaje realista en dorados cálidos, borgoña y verde pino.")}</p>
-      <p class="muted">{t(f"Pieces from ${min(x[3] for x in COLLECTIONS)}. Choose what you love and we'll send exact pricing and availability for your selection.", f"Piezas desde ${min(x[3] for x in COLLECTIONS)}. Elige lo que te guste y te enviamos precios exactos y disponibilidad de tu selección.")}</p>
-      <div class="btns"><a class="btn solid" href="#collection">{t("View the collection", "Ver la colección")}</a><button type="button" class="btn line" data-open-sel>{t("Request pricing", "Pedir precios")}</button></div>
+      <p class="muted">{t("Pieces are ordered for you. Choose what you love, send us your selection, and we'll confirm availability and delivery.", "Las piezas se piden para ti. Elige lo que te guste, envíanos tu selección y te confirmamos disponibilidad y entrega.")}</p>
+      <div class="btns"><a class="btn solid" href="#collection">{t("View the collection", "Ver la colección")}</a><button type="button" class="btn line" data-open-sel>{t("My selection", "Mi selección")}</button></div>
     </div>
     <div class="hc-hero-art">{"".join(f'<div><img src="img/hol-cm-h{n:02d}.jpg" alt=""></div>' for n in hero)}</div>
   </div>
@@ -108,7 +113,7 @@ def holiday_body(t):
   <div class="wrap"><ol class="hc-steps">
     <li><b>1</b><span><strong>{t("Browse", "Explora")}</strong>{t("Tap any piece to see it up close.", "Toca cualquier pieza para verla de cerca.")}</span></li>
     <li><b>2</b><span><strong>{t("Select", "Elige")}</strong>{t("Add the pieces you love to your selection.", "Agrega a tu selección las piezas que te gusten.")}</span></li>
-    <li><b>3</b><span><strong>{t("Request", "Solicita")}</strong>{t("Send your list and we'll reply with pricing.", "Envíanos tu lista y te respondemos con precios.")}</span></li>
+    <li><b>3</b><span><strong>{t("Request", "Solicita")}</strong>{t("Send your list and we'll confirm availability.", "Envíanos tu lista y te confirmamos disponibilidad.")}</span></li>
   </ol></div>
 </section>
 <section id="collection" class="hc-shop">
@@ -135,9 +140,10 @@ def holiday_body(t):
     <div class="hc-code" id="hc-lb-code"></div>
     <h2 id="hc-lb-name"></h2>
     <p class="hc-size" id="hc-lb-size"></p>
+    <p class="hc-price hc-lb-price" id="hc-lb-price"></p>
     <p class="muted" id="hc-lb-desc"></p>
     <button type="button" class="btn solid" id="hc-lb-add"></button>
-    <p class="hc-note">{t("Add pieces to your selection and send us the list for exact pricing and availability.", "Agrega piezas a tu selección y envíanos la lista para recibir precios exactos y disponibilidad.")}</p>
+    <p class="hc-note">{t("Prices in USD. Subject to availability: we confirm stock and delivery before you pay.", "Precios en USD. Sujeto a disponibilidad: confirmamos existencias y entrega antes de que pagues.")}</p>
   </div>
 </div></div>
 
@@ -146,6 +152,8 @@ def holiday_body(t):
   <div class="hc-dr-head"><h2>{t("My selection", "Mi selección")}</h2><button type="button" class="hc-x" data-close-sel aria-label="Close">×</button></div>
   <div class="hc-dr-body" id="hc-dr-body"></div>
   <div class="hc-dr-foot">
+    <div class="hc-total"><span>{t("Total", "Total")}</span><b id="hc-total">$0</b></div>
+    <p class="hc-avail">{t("Prices in USD. We confirm availability and delivery before you pay.", "Precios en USD. Confirmamos disponibilidad y entrega antes de que pagues.")}</p>
     <input id="hc-name" autocomplete="name" data-ph-en="Your name" data-ph-es="Tu nombre" placeholder="Your name">
     <a class="btn solid" id="hc-wa" href="https://wa.me/17542456323" target="_blank" rel="noopener">{t("Send via WhatsApp", "Enviar por WhatsApp")}</a>
     <button type="button" class="btn line" id="hc-copy">{t("Copy my list", "Copiar mi lista")}</button>

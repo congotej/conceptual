@@ -65,6 +65,8 @@
     var cards = Array.prototype.slice.call(document.querySelectorAll('.hc-card'));
     var byCode = {}; cards.forEach(function (c) { byCode[c.dataset.code] = c; });
     var nm = function (code) { return dec(byCode[code].dataset[L()]); };
+    var price = function (code) { return Number(byCode[code].dataset.price); };
+    var total = function () { return Object.keys(sel).reduce(function (a, k) { return a + price(k) * sel[k]; }, 0); };
     var sel = {};
     try { sel = JSON.parse(localStorage.getItem('ci-holiday') || '{}') || {}; } catch (e) {}
     Object.keys(sel).forEach(function (k) { if (!byCode[k]) delete sel[k]; });
@@ -75,10 +77,11 @@
     if (bar) bar.classList.add('away');
 
     var message = function () {
-      var n = nameIn.value.trim(), lines = Object.keys(sel).map(function (k) { return '• ' + k + ' — ' + nm(k) + ' × ' + sel[k]; });
-      return tx('Hi Conceptual! ' + (n ? 'This is ' + n + '. ' : '') + "I'd like pricing and availability for these pieces from the Holiday Collection:\n\n",
-                '¡Hola Conceptual! ' + (n ? 'Soy ' + n + '. ' : '') + 'Me gustaría saber precios y disponibilidad de estas piezas de la Colección Navideña:\n\n')
-        + lines.join('\n') + tx('\n\nThank you!', '\n\n¡Gracias!');
+      var n = nameIn.value.trim(), lines = Object.keys(sel).map(function (k) { return '• ' + k + ' — ' + nm(k) + ' × ' + sel[k] + ' — $' + (price(k) * sel[k]); });
+      return tx('Hi Conceptual! ' + (n ? 'This is ' + n + '. ' : '') + "I'd like to order these pieces from the Holiday Collection:\n\n",
+                '¡Hola Conceptual! ' + (n ? 'Soy ' + n + '. ' : '') + 'Quiero pedir estas piezas de la Colección Navideña:\n\n')
+        + lines.join('\n') + '\n\nTotal: $' + total() + ' USD'
+        + tx('\n\nCould you confirm availability and delivery? Thank you!', '\n\n¿Me confirman disponibilidad y entrega? ¡Gracias!');
     };
     var render = function () {
       var ks = Object.keys(sel);
@@ -89,10 +92,11 @@
       });
       if (cur) document.getElementById('hc-lb-add').textContent = sel[cur.dataset.code] ? tx('✓ In your selection — remove', '✓ En tu selección — quitar') : tx('Add to selection', 'Agregar a mi selección');
       body.innerHTML = ks.length ? ks.map(function (k) {
-        return '<div class="hc-row"><img src="' + byCode[k].querySelector('img').getAttribute('src') + '" alt=""><div><span class="hc-code">' + k + '</span><b>' + nm(k) + '</b></div>' +
+        return '<div class="hc-row"><img src="' + byCode[k].querySelector('img').getAttribute('src') + '" alt=""><div><span class="hc-code">' + k + '</span><b>' + nm(k) + '</b><span class="hc-row-price">$' + (price(k) * sel[k]) + '</span></div>' +
           '<div class="hc-qty"><button type="button" data-q="-1" data-k="' + k + '" aria-label="−">−</button><span>' + sel[k] + '</span><button type="button" data-q="1" data-k="' + k + '" aria-label="+">+</button></div>' +
           '<button type="button" class="hc-x" data-rm="' + k + '" aria-label="Remove">×</button></div>';
       }).join('') : '<p class="hc-empty">' + tx('Nothing selected yet. Tap “+ Select” on any piece.', 'Aún no has elegido nada. Toca “+ Elegir” en cualquier pieza.') + '</p>';
+      document.getElementById('hc-total').textContent = '$' + total();
       wa.href = 'https://wa.me/17542456323?text=' + encodeURIComponent(message());
     };
     var toggle = function (k) { if (sel[k]) delete sel[k]; else sel[k] = 1; save(); render(); };
@@ -108,6 +112,7 @@
       document.getElementById('hc-lb-name').textContent = nm(c.dataset.code);
       document.getElementById('hc-lb-desc').textContent = dec(c.dataset[L() === 'es' ? 'des' : 'den']);
       document.getElementById('hc-lb-size').textContent = dec(c.dataset[L() === 'es' ? 'ses' : 'sen']);
+      document.getElementById('hc-lb-price').textContent = '$' + c.dataset.price;
       lb.hidden = false; lock(); render();
     };
     var closeLb = function () { lb.hidden = true; cur = null; lock(); };
