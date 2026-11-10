@@ -648,7 +648,7 @@ PAGES = [
     ("window-treatments.html", "Window Treatments · Conceptual Interiors", "Custom drapery, sheer curtains, blackout, Roman and roller shades, and motorization.", wt),
     ("interior-design.html", "Interior Design · Conceptual Interiors", "Interior design, furnishings, styling and seasonal holiday décor by Conceptual Interiors.", idp),
     ("portfolio.html", "Portfolio · Conceptual Interiors", "Recent window treatment and interior projects by Conceptual Interiors.", pf),
-    ("holiday-collection.html", "Holiday Collection · Conceptual Interiors", "Fifty holiday ornaments, mercury glass, gilded accents and greenery, available by special order. Pricing on request.", holiday_body(t)),
+    ("holiday-collection.html", "Holiday Collection · Conceptual Interiors", "Holiday ornaments, mercury glass, gilded accents and greenery, available by special order. Pricing on request.", holiday_body(t)),
     ("about.html", "About · Conceptual Interiors", "Claudia Vélez, founder and designer of Conceptual Interiors.", ab),
     ("contact.html", "Contact · Conceptual Interiors", "Schedule a consultation with Conceptual Interiors.", ct),
 ]

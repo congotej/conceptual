@@ -61,6 +61,13 @@ ITEMS = [
     ("greenery", "Frosted Pine &amp; Berry Spray", "Ramo de pino escarchado con bayas", "Frosted pine with bright red berry clusters.", "Pino escarchado con racimos de bayas rojas."),
     ("greenery", "Frosted Berry Branch", "Rama escarchada con bayas", "White-frosted branch with red and silver berries.", "Rama escarchada en blanco con bayas rojas y plateadas."),
     ("greenery", "Twig &amp; Cone Branch", "Rama con mini piñas", "Bare twig branch with tiny natural cones.", "Rama de ramitas con pequeñas piñas naturales."),
+    ("natural", "Gilded Stag Candle Holder", "Portavela de venado dorado", "Antique-gold stag head whose antlers cradle a candle.", "Cabeza de venado dorada cuyas astas sostienen una vela."),
+    ("bells", "Brass Bell Cluster with Berries", "Racimo de campanas con bayas", "Antique brass bells on burgundy ribbon, topped with berries and greenery.", "Campanas en bronce antiguo con cinta borgoña, bayas y follaje."),
+    ("bells", "Gold Jingle Bell Cluster", "Racimo de cascabeles dorados", "Gold jingle bells on red ribbon with a pine and berry sprig.", "Cascabeles dorados con cinta roja y una ramita de pino con bayas."),
+    ("greenery", "Trailing Gold Cone Branch", "Rama colgante con piñas doradas", "Cascading branch dotted with gold-dusted mini cones.", "Rama en cascada con mini piñas espolvoreadas en dorado."),
+    ("greenery", "Trailing Dark Cone Branch", "Rama colgante con piñas oscuras", "Cascading branch with dark mini cones and frosted tips.", "Rama en cascada con mini piñas oscuras y puntas escarchadas."),
+    ("pinecone", "Champagne Star Petal Ball", "Bola de pétalos estrella champaña", "Clusters of star-shaped petals in soft champagne bronze.", "Racimos de pétalos en forma de estrella, en bronce champaña suave."),
+    ("pinecone", "Champagne Star Petal Cone", "Cono de pétalos estrella champaña", "The star-petal design in a hanging cone shape.", "El diseño de pétalos estrella en forma de cono colgante."),
 ]
 
 
@@ -87,7 +94,7 @@ def holiday_body(t):
     <div class="stack">
       <div class="label">{t("Holiday 2026 · Special order", "Navidad 2026 · Por encargo")}</div>
       <h1>{t("The Holiday Collection", "La Colección Navideña")}</h1>
-      <p class="lede">{t("Fifty pieces chosen by Claudia for this season: pinecone ornaments, mercury and antique glass, gilded accents and lifelike greenery in warm golds, burgundy and woodland pine.", "Cincuenta piezas escogidas por Claudia para esta temporada: piñas decorativas, vidrio mercurio y antiguo, detalles dorados y follaje realista en dorados cálidos, borgoña y verde pino.")}</p>
+      <p class="lede">{t(f"{len(ITEMS)} pieces chosen by Claudia for this season: pinecone ornaments, mercury and antique glass, gilded accents and lifelike greenery in warm golds, burgundy and woodland pine.", f"{len(ITEMS)} piezas escogidas por Claudia para esta temporada: piñas decorativas, vidrio mercurio y antiguo, detalles dorados y follaje realista en dorados cálidos, borgoña y verde pino.")}</p>
       <p class="muted">{t("Pieces are ordered for you. Choose what you love and we'll send pricing and availability.", "Las piezas se piden para ti. Elige lo que te guste y te enviamos precios y disponibilidad.")}</p>
       <div class="btns"><a class="btn solid" href="#collection">{t("View the collection", "Ver la colección")}</a><button type="button" class="btn line" data-open-sel>{t("Request pricing", "Pedir precios")}</button></div>
     </div>
