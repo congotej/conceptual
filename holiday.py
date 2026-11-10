@@ -3,12 +3,12 @@ Images live in img/hol-cm-hNN.jpg. Item order fixes each piece's code (CM-H01 �
 
 # (id, name EN, name ES, starting price shown on the page)
 COLLECTIONS = [
-    ("trees", "Christmas Trees", "Árboles de Navidad", 549),
     ("pinecone", "Pinecone Collection", "Colección de piñas", 10),
     ("glass", "Mercury &amp; Antique Glass", "Vidrio mercurio y antiguo", 9),
     ("natural", "Natural &amp; Gilded", "Natural y dorado", 8),
     ("bells", "Bells &amp; Drops", "Cascabeles y colgantes", 11),
     ("greenery", "Greenery &amp; Branches", "Follaje y ramas", 6),
+    ("trees", "Christmas Trees", "Árboles de Navidad", 549),
 ]
 
 # (collection, name EN, name ES, description EN, description ES, size EN, size ES)
