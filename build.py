@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Builds the Conceptual Interiors static site into ./dist (deploy) and ./preview (artifact)."""
 import os, re, shutil
+from holiday import holiday_body
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DIST = os.path.join(ROOT, "dist")
@@ -14,6 +15,7 @@ NAV = [
     ("window-treatments.html", "Window Treatments", "Cortinas y persianas"),
     ("interior-design.html", "Interior Design", "Diseño interior"),
     ("portfolio.html", "Portfolio", "Portafolio"),
+    ("holiday-collection.html", "Holiday", "Navidad"),
     ("about.html", "About", "Nosotros"),
     ("contact.html", "Contact", "Contacto"),
 ]
@@ -198,12 +200,12 @@ home = f'''<section class="hero">
             <span class="textlink">{t("Design services", "Ver diseño")}</span>
           </div>
         </a>
-        <a class="card small" href="interior-design.html#seasonal">
+        <a class="card small" href="holiday-collection.html">
           {ph("xmas-dress11.jpg", "Two designers dressing a Christmas tree in gold ornaments and dried florals", "50% 55%")}
           <div class="stack" style="gap:12px">
             <h3>{t("Seasonal styling", "Decoración de temporada")}</h3>
             <p>{t("Holiday décor designed and installed in your home, from the tree to the table.", "Decoración navideña diseñada e instalada en tu casa, del árbol a la mesa.")}</p>
-            <span class="textlink">{t("A Conceptual Christmas", "Una Navidad Conceptual")}</span>
+            <span class="textlink">{t("See the holiday collection", "Ver la colección navideña")}</span>
           </div>
         </a>
       </div>
@@ -376,7 +378,7 @@ idp = f'''<section class="intro">
       <h2>{t("A Conceptual Christmas.", "Una Navidad Conceptual.")}</h2>
       <p class="lede">{t("We design and install holiday décor in any style you have in mind, from classic to modern: the tree, garlands, the table and the mantel, ready for the season.", "Diseñamos e instalamos la decoración navideña en el estilo que imagines, de clásico a moderno: el árbol, las guirnaldas, la mesa y la repisa, listos para la temporada.")}</p>
       <p class="muted">{t("Booking for the holidays fills early. Reach out to reserve a date.", "La agenda de temporada se llena pronto. Escríbenos para reservar una fecha.")}</p>
-      <div class="btns"><a class="btn solid" href="contact.html">{t("Reserve a holiday date", "Reserva tu fecha")}</a></div>
+      <div class="btns"><a class="btn solid" href="contact.html">{t("Reserve a holiday date", "Reserva tu fecha")}</a><a class="btn line" href="holiday-collection.html">{t("See the holiday collection", "Ver la colección navideña")}</a></div>
     </div>
     <figure class="vid">
       <video src="media/christmas.mp4" poster="media/christmas-poster.jpg" controls playsinline preload="none" aria-label="Video of a home being decorated for Christmas"></video>
@@ -646,6 +648,7 @@ PAGES = [
     ("window-treatments.html", "Window Treatments · Conceptual Interiors", "Custom drapery, sheer curtains, blackout, Roman and roller shades, and motorization.", wt),
     ("interior-design.html", "Interior Design · Conceptual Interiors", "Interior design, furnishings, styling and seasonal holiday décor by Conceptual Interiors.", idp),
     ("portfolio.html", "Portfolio · Conceptual Interiors", "Recent window treatment and interior projects by Conceptual Interiors.", pf),
+    ("holiday-collection.html", "Holiday Collection · Conceptual Interiors", "Fifty holiday ornaments, mercury glass, gilded accents and greenery, available by special order. Pricing on request.", holiday_body(t)),
     ("about.html", "About · Conceptual Interiors", "Claudia Vélez, founder and designer of Conceptual Interiors.", ab),
     ("contact.html", "Contact · Conceptual Interiors", "Schedule a consultation with Conceptual Interiors.", ct),
 ]
