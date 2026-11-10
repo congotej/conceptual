@@ -72,8 +72,8 @@ ITEMS = [
 ]
 
 
-# Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet: 2.2x under $5 cost, 2x for $5-10, 1.7x over $10)
-PRICES = [18, 22, 21, 18, 19, 23, 16, 22, 18, 22, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 20, 20, 54, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 57, 21, 18, 15, 15, 19, 12]
+# Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet: 2.2x under $5 cost, 2x for $5-10, 1.65x over $10)
+PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12]
 assert len(PRICES) == len(ITEMS)
 
 
