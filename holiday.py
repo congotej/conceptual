@@ -6,8 +6,10 @@ COLLECTIONS = [
     ("pinecone", "Pinecone Collection", "Colección de piñas", 10),
     ("glass", "Mercury &amp; Antique Glass", "Vidrio mercurio y antiguo", 9),
     ("natural", "Natural &amp; Gilded", "Natural y dorado", 8),
+    ("deer", "Reindeer Collection", "Colección de venados", 9),
     ("bells", "Bells &amp; Drops", "Cascabeles y colgantes", 11),
     ("greenery", "Greenery &amp; Branches", "Follaje y ramas", 6),
+    ("tabletop", "Tabletop Trees", "Árboles de mesa", 33),
     ("trees", "Christmas Trees", "Árboles de Navidad", 549),
 ]
 
@@ -75,11 +77,36 @@ ITEMS = [
     ("trees", "Snow King Flocked Pre-Lit Tree", "Árbol nevado pre-iluminado Snow King", "Snow-flocked tree with 600 clear lights and 1,215 tips. Easy-light pole: the lights connect as you stack the sections.", "Árbol nevado con 600 luces transparentes y 1.215 puntas. Poste de fácil encendido: las luces se conectan al armar las secciones.", "7.5' H × 58\" dia", "7.5' alto × 58\" diám."),
     ("trees", "Feather Pine Pre-Lit Tree", "Árbol pre-iluminado Feather Pine", "Our fullest tree: 4,078 lifelike feathered tips and 700 warm white LED lights. Easy-light pole: the lights connect as you stack the sections.", "Nuestro árbol más frondoso: 4.078 puntas realistas y 700 luces LED blanco cálido. Poste de fácil encendido: las luces se conectan al armar las secciones.", "7.5' H × 57\" dia", "7.5' alto × 57\" diám."),
     ("trees", "Emerald Mixed Fir Pre-Lit Tree, 9 ft", "Árbol pre-iluminado de abeto mixto, 9 pies", "Made for high ceilings: 1,100 warm white LED lights, 2,530 realistic tips with pinecone accents, hinged branches and a metal stand.", "Ideal para techos altos: 1.100 luces LED blanco cálido, 2.530 puntas realistas con piñas, ramas con bisagra y base metálica.", "9' H × 74\" dia", "9' alto × 74\" diám."),
+    ("deer", "Antique Gold Reclining Deer Bowl", "Venado echado con bowl, dorado antiguo", "Aluminum reclining deer holding a bowl in its antlers. A centerpiece for ornaments, fruit or sweets.", "Venado de aluminio echado que sostiene un bowl en sus astas. Centro de mesa para adornos, frutas o dulces.", "15.75\" H", "15.75\" alto"),
+    ("deer", "Pewter Reclining Deer Bowl", "Venado echado con bowl, peltre", "The reclining deer bowl in a soft light pewter finish.", "El venado echado con bowl en acabado peltre claro.", "15.75\" H", "15.75\" alto"),
+    ("deer", "Gold &amp; Silver Reclining Deer Bowl", "Venado echado con bowl, dorado y plata", "Gold reclining deer with a polished silver bowl.", "Venado dorado echado con bowl plateado pulido.", "15\" H", "15\" alto"),
+    ("deer", "Deer Trio Centerpiece Bowl", "Centro de mesa con tres venados", "Large silver bowl carried by three antique-gold deer. A statement piece for the dining table.", "Gran bowl plateado sostenido por tres venados en dorado antiguo. Una pieza protagonista para el comedor.", "19.5\" dia × 13\" H", "19.5\" diám. × 13\" alto"),
+    ("deer", "Gold Triple Deer Bowl", "Bowl dorado con tres venados", "Polished gold aluminum bowl resting on three deer.", "Bowl de aluminio dorado pulido sobre tres venados.", "15.5\" dia × 8.5\" H", "15.5\" diám. × 8.5\" alto"),
+    ("deer", "Gold Double Deer Head Bowl", "Bowl dorado con cabezas de venado", "Footed gold bowl with a deer head on each side.", "Bowl dorado con base y una cabeza de venado a cada lado.", "12.5\" L × 8.5\" W", "12.5\" largo × 8.5\" ancho"),
+    ("deer", "Silver Double Deer Head Bowl", "Bowl plateado con cabezas de venado", "Footed silver bowl with a deer head on each side.", "Bowl plateado con base y una cabeza de venado a cada lado.", "12.5\" L × 8.5\" W", "12.5\" largo × 8.5\" ancho"),
+    ("deer", "Gold Deer Wine Cooler", "Enfriador de vino dorado con venados", "Gold wine and champagne cooler with deer-head handles, made for holiday entertaining.", "Enfriador de vino y champaña dorado con asas de venado, ideal para tus celebraciones.", "17\" L × 10\" H", "17\" largo × 10\" alto"),
+    ("deer", "Silver Deer Wine Cooler", "Enfriador de vino plateado con venados", "Silver wine and champagne cooler with deer-head handles.", "Enfriador de vino y champaña plateado con asas de venado.", "17\" L × 10\" H", "17\" largo × 10\" alto"),
+    ("deer", "Gold Standing Deer, Small", "Venado dorado de pie, pequeño", "Antique-gold aluminum deer for mantels, shelves and tables.", "Venado de aluminio en dorado antiguo para repisas y mesas.", "8.5\" H × 5.5\" L", "8.5\" alto × 5.5\" largo"),
+    ("deer", "Gold Standing Deer, Medium", "Venado dorado de pie, mediano", "Antique-gold aluminum deer, a size up.", "Venado de aluminio en dorado antiguo, tamaño mediano.", "10.5\" H × 7\" L", "10.5\" alto × 7\" largo"),
+    ("deer", "Gold Reindeer", "Reno dorado", "Polished gold aluminum reindeer.", "Reno de aluminio dorado pulido.", "12.5\" H × 8.5\" L", "12.5\" alto × 8.5\" largo"),
+    ("deer", "Silver Reindeer", "Reno plateado", "Tall silver nickel reindeer.", "Reno alto en níquel plateado.", "17.5\" H × 10\" L", "17.5\" alto × 10\" largo"),
+    ("deer", "Grey &amp; Gold Deer Pot, Small", "Matera gris y dorada con venado, pequeña", "Light grey cement pot with a gold deer, for plants, candles or greenery.", "Matera de cemento gris claro con venado dorado, para plantas, velas o follaje.", "5.5\" L × 4.75\" W × 4.25\" H", "5.5\" largo × 4.75\" ancho × 4.25\" alto"),
+    ("deer", "Grey &amp; Gold Deer Pot, Medium", "Matera gris y dorada con venado, mediana", "Light grey cement pot with a gold deer.", "Matera de cemento gris claro con venado dorado.", "6.75\" L × 6\" W × 5.5\" H", "6.75\" largo × 6\" ancho × 5.5\" alto"),
+    ("deer", "Grey &amp; Gold Deer Pot, Large", "Matera gris y dorada con venado, grande", "Light grey cement pot with a gold deer.", "Matera de cemento gris claro con venado dorado.", "8.25\" L × 7\" W × 6.75\" H", "8.25\" largo × 7\" ancho × 6.75\" alto"),
+    ("deer", "Black &amp; Bronze Deer Pot, Small", "Matera negra y bronce con venado, pequeña", "Aged black and bronze cement pot with a deer relief.", "Matera de cemento negro y bronce envejecido con venado en relieve.", "5.5\" L × 4.75\" W × 4.25\" H", "5.5\" largo × 4.75\" ancho × 4.25\" alto"),
+    ("deer", "Black &amp; Bronze Deer Pot, Medium", "Matera negra y bronce con venado, mediana", "Aged black and bronze cement pot with a deer relief.", "Matera de cemento negro y bronce envejecido con venado en relieve.", "6.75\" L × 6\" W × 5.5\" H", "6.75\" largo × 6\" ancho × 5.5\" alto"),
+    ("deer", "Black &amp; Bronze Deer Pot, Large", "Matera negra y bronce con venado, grande", "Aged black and bronze cement pot with a deer relief.", "Matera de cemento negro y bronce envejecido con venado en relieve.", "8.25\" L × 7\" W × 6.75\" H", "8.25\" largo × 7\" ancho × 6.75\" alto"),
+    ("tabletop", "Frosted Pine Tree, 18 in", "Pino escarchado, 18 pulgadas", "Frosted mini pine with pinecones in a burlap base. Ready for a side table or entry.", "Mini pino escarchado con piñas y base de yute. Listo para una mesa auxiliar o la entrada.", "18\" H", "18\" alto"),
+    ("tabletop", "Frosted Pine Tree, 2 ft", "Pino escarchado, 2 pies", "Frosted pine with pinecones in a burlap base.", "Pino escarchado con piñas y base de yute.", "24\" H", "24\" alto"),
+    ("tabletop", "Pine &amp; Pinecone Tree, 2 ft", "Pino con piñas, 2 pies", "Natural pine with pinecones in a burlap base.", "Pino natural con piñas y base de yute.", "24\" H", "24\" alto"),
+    ("tabletop", "Airy Pinecone Tree, 3 ft", "Pino ligero con piñas, 3 pies", "Light, natural-looking pine with pinecones in a burlap base.", "Pino ligero de aspecto natural con piñas y base de yute.", "36.25\" H", "36.25\" alto"),
+    ("tabletop", "Full Pinecone Tree, 3 ft", "Pino frondoso con piñas, 3 pies", "Fuller pine with pinecones in a burlap base.", "Pino más frondoso con piñas y base de yute.", "36.25\" H", "36.25\" alto"),
+    ("tabletop", "Pinecone Tree, 4 ft", "Pino con piñas, 4 pies", "Our tallest tabletop tree: pine with pinecones in a burlap base. Great for entries and corners.", "Nuestro árbol de mesa más alto: pino con piñas y base de yute. Ideal para entradas y esquinas.", "48\" H", "48\" alto"),
 ]
 
 
 # Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet: 2.2x under $5 cost, 2x for $5-10, 1.65x over $10)
-PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12, 649, 699, 549, 759, 849]
+PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12, 649, 699, 549, 759, 849, 148, 148, 148, 264, 148, 53, 53, 95, 95, 21, 35, 51, 91, 9, 16, 23, 9, 16, 23, 33, 70, 43, 93, 110, 171]
 assert len(PRICES) == len(ITEMS)
 
 
