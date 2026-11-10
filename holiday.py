@@ -74,11 +74,12 @@ ITEMS = [
     ("trees", "Cashmere Pine Slim Pre-Lit Tree", "Árbol pre-iluminado slim Cashmere", "The tree from our Conceptual Christmas video. Slim shape for condos and narrow spaces, 600 warm white LED lights, 1,320 tips, hinged branches and a metal stand. Tree only: ornaments and styling sold separately.", "El árbol de nuestro video Una Navidad Conceptual. Forma delgada ideal para apartamentos y espacios angostos, 600 luces LED blanco cálido, 1.320 puntas, ramas con bisagra y base metálica. Solo el árbol: adornos y decoración se venden aparte.", "7.5' H × 46\" dia", "7.5' alto × 46\" diám."),
     ("trees", "Snow King Flocked Pre-Lit Tree", "Árbol nevado pre-iluminado Snow King", "Snow-flocked tree with 600 clear lights and 1,215 tips. Easy-light pole: the lights connect as you stack the sections.", "Árbol nevado con 600 luces transparentes y 1.215 puntas. Poste de fácil encendido: las luces se conectan al armar las secciones.", "7.5' H × 58\" dia", "7.5' alto × 58\" diám."),
     ("trees", "Feather Pine Pre-Lit Tree", "Árbol pre-iluminado Feather Pine", "Our fullest tree: 4,078 lifelike feathered tips and 700 warm white LED lights. Easy-light pole: the lights connect as you stack the sections.", "Nuestro árbol más frondoso: 4.078 puntas realistas y 700 luces LED blanco cálido. Poste de fácil encendido: las luces se conectan al armar las secciones.", "7.5' H × 57\" dia", "7.5' alto × 57\" diám."),
+    ("trees", "Emerald Mixed Fir Pre-Lit Tree, 9 ft", "Árbol pre-iluminado de abeto mixto, 9 pies", "Made for high ceilings: 1,100 warm white LED lights, 2,530 realistic tips with pinecone accents, hinged branches and a metal stand.", "Ideal para techos altos: 1.100 luces LED blanco cálido, 2.530 puntas realistas con piñas, ramas con bisagra y base metálica.", "9' H × 74\" dia", "9' alto × 74\" diám."),
 ]
 
 
 # Retail price in USD for each item, in the same order as ITEMS (from the pricing sheet: 2.2x under $5 cost, 2x for $5-10, 1.65x over $10)
-PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12, 649, 699, 549, 759]
+PRICES = [18, 21, 21, 18, 19, 22, 16, 21, 18, 21, 15, 16, 10, 14, 16, 13, 10, 14, 20, 9, 10, 16, 18, 11, 16, 13, 9, 9, 12, 14, 11, 15, 8, 24, 8, 11, 11, 19, 19, 53, 16, 15, 16, 6, 7, 14, 13, 19, 10, 10, 55, 20, 17, 15, 15, 18, 12, 649, 699, 549, 759, 849]
 assert len(PRICES) == len(ITEMS)
 
 
